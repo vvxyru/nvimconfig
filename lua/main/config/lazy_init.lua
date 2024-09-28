@@ -13,6 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>")
 
 require("lazy").setup({
     spec = {
