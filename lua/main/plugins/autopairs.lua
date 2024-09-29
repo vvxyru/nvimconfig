@@ -1,6 +1,6 @@
 return {
     "jiangmiao/auto-pairs",
-    event = "BufEnter",
+    event = "InsertEnter",
     config = function()
     end,
 }

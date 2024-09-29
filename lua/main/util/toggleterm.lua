@@ -1,6 +1,6 @@
 return {
     "akinsho/toggleterm.nvim",
-    version = "*", 
+    version = "*",
     config = function()
         require("toggleterm").setup({})
         local map = vim.keymap.set

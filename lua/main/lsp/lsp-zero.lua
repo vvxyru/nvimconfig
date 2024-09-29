@@ -2,13 +2,14 @@
 
 return {
     "VonHeikemen/lsp-zero.nvim",
+    event = "BufRead",
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/nvim-cmp",
-        "L3MON4D3/LuaSnip",
+        { "williamboman/mason.nvim" },
+        { "williamboman/mason-lspconfig.nvim" },
+        { "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" } },
+        { "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" },
+        { "hrsh7th/nvim-cmp", event = "InsertEnter" },
+        { "L3MON4D3/LuaSnip", event = "InsertCharPre" },
     },
 
     config = function()
