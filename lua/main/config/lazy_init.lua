@@ -19,7 +19,7 @@ require("lazy").setup({
     spec = {
         { import = "main.plugins" },
         { import = "main.util" },
-        { import = "main.lsp" },
+        { import = "main.editor" },
     },
     checker = { enabled = true },
     change_detection = { notify = false },

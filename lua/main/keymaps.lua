@@ -1,4 +1,4 @@
-local map = vim.keymap.set 
+local map = vim.keymap.set
 
 --[[
 potential mapping conflictions:
@@ -11,7 +11,7 @@ vim.g.mapleader = " "
 -- insert mode esc
 map("i", "jj", "<esc>")
 
--- line movement 
+-- line movement
 map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi")
 map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi")
 
@@ -48,14 +48,14 @@ map("n", "N", "Nzzzv")
 map("n", "<leader><cr>", "<cmd>nohl<cr>")
 
 -- quick commenting
-map("n", "<leader>/", "gcc", { remap = true })
-map("v", "<leader>/", "gc", { remap = true })
+map("n", "<leader>;", "gcc", { remap = true })
+map("v", "<leader>;", "gc", { remap = true })
 
 -- copy and paste mappings
 map("n", "<leader>ya", "<cmd>%y+<cr>")
 
 map("x", "<leader>pd", [["_dP]])
-map({"n", "v"}, "<leader>d", [["_d]])
+map({ "n", "v" }, "<leader>d", [["_d]])
 
 -- window movement/creation
 map("n", "<C-h>", "<C-w>h", { remap = true })
@@ -79,4 +79,3 @@ map("n", "<leader>so", "<cmd>so<cr>", { remap = true })
 
 -- lazy
 -- map("n", "<leader>ll", "<cmd>Lazy<cr>")
-
