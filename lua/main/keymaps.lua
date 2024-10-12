@@ -77,5 +77,5 @@ map("n", "<leader>q", "<cmd>q<cr>")
 map("n", "<leader>Q", "<cmd>q!<cr>")
 map("n", "<leader>so", "<cmd>so<cr>", { remap = true })
 
--- lazy
--- map("n", "<leader>ll", "<cmd>Lazy<cr>")
+-- quick switch to config
+map("n", "<leader>oo", "<cmd>:tcd ~/.config/nvim<cr>")
