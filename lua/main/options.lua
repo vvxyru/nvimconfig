@@ -7,24 +7,28 @@ opt.cursorline = true
 
 opt.number = true
 opt.relativenumber = true
+opt.wrap = false
+
+-- wslview
+vim.g.browser = "wslview"
 
 -- Function to enable relative number in normal mode and disable in insert mode
 local function set_numbering()
-	vim.api.nvim_create_autocmd({ "InsertEnter" }, {
-		pattern = "*",
-		callback = function()
-			vim.opt.relativenumber = false
-			vim.opt.number = true
-		end,
-	})
+    vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+        pattern = "*",
+        callback = function()
+            vim.opt.relativenumber = false
+            vim.opt.number = true
+        end,
+    })
 
-	vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-		pattern = "*",
-		callback = function()
-			vim.opt.relativenumber = true
-			vim.opt.number = true
-		end,
-	})
+    vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+        pattern = "*",
+        callback = function()
+            vim.opt.relativenumber = true
+            vim.opt.number = true
+        end,
+    })
 end
 
 set_numbering()

@@ -7,19 +7,19 @@ return {
         local action = require("telescope.actions")
         local map = vim.keymap.set
 
-        map("n", "<leader>pf", builtin.find_files, {})
+        map("n", "<leader>pf", builtin.find_files, { desc = "Open Telescope Finder" })
 
         require("telescope").setup({
             mappings = {
                 i = {
-                    ["<C-j>"] =  action.move_selection_next,
-                    ["<C-k>"] =  action.move_selection_previous,
+                    ["<C-j>"] = action.move_selection_next,
+                    ["<C-k>"] = action.move_selection_previous,
                 },
                 n = {
-                    ["<C-j>"] =  action.move_selection_next,
-                    ["<C-k>"] =  action.move_selection_previous,
+                    ["<C-j>"] = action.move_selection_next,
+                    ["<C-k>"] = action.move_selection_previous,
                 },
-            }
+            },
         })
     end,
 }

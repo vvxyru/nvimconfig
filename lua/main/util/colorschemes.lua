@@ -79,8 +79,8 @@ return {
         priority = 1000,
         config = function()
             require("kanagawa-paper").setup({
-                -- transparent = true,
-                transparent = false,
+                transparent = true,
+                -- transparent = false,
             })
         end,
     },

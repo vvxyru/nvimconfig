@@ -8,6 +8,6 @@ return {
     },
     config = function()
         local map = vim.keymap.set
-        map("n", "<leader>t", "<cmd>Neotree toggle<cr>")
+        map("n", "<leader>t", "<cmd>Neotree toggle<cr>", { desc = "Toggle NeoTree" })
     end,
 }

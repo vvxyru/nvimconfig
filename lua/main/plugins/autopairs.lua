@@ -1,6 +1,5 @@
 return {
-    "jiangmiao/auto-pairs",
-    event = "InsertEnter",
-    config = function()
-    end,
+    -- "jiangmiao/auto-pairs",
+    -- event = "VeryLazy",
+    -- config = function() end,
 }
